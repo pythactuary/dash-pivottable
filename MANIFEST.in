@@ -1,5 +1,11 @@
 include dash_pivottable/dash_pivottable.min.js
-include dash_pivottable/dash_pivottable.dev.js
+include dash_pivottable/dash_pivottable.min.js.map
+include dash_pivottable/async-*.js
+include dash_pivottable/async-*.js.map
+include dash_pivottable/*-shared.js
+include dash_pivottable/*-shared.js.map
 include dash_pivottable/metadata.json
-include dash_pivottable/package.json
+include dash_pivottable/package-info.json
 include README.md
+include LICENSE
+include package.json

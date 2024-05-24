@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import PivotTableUI from 'react-pivottable/PivotTableUI';
 import 'react-pivottable/pivottable.css';
@@ -39,14 +39,14 @@ export default class PivotTable extends Component {
         this.handleChange = this.handleChange.bind(this);
     }
 
-    handleChange(state){
+    handleChange(state) {
         const {
-          cols,
-          colOrder,
-          rows,
-          rowOrder,
-          aggregatorName,
-          rendererName
+            cols,
+            colOrder,
+            rows,
+            rowOrder,
+            aggregatorName,
+            rendererName
         } = state;
 
         if (typeof this.props.setProps === 'function') {

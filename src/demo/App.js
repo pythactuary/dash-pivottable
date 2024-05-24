@@ -1,32 +1,24 @@
 /* eslint no-magic-numbers: 0 */
-import React, {Component} from 'react';
+import React, { useState } from 'react';
 
 import { PivotTable } from '../lib';
 
-class App extends Component {
+const App = () => {
 
-    constructor() {
-        super();
-        this.state = {
-            value: ''
-        };
-        this.setProps = this.setProps.bind(this);
-    }
+    const [state, setState] = useState({ value: '', label: 'Type Here' });
+    const setProps = (newProps) => {
+        setState(newProps);
+    };
 
-    setProps(newProps) {
-        this.setState(newProps);
-    }
+    return (
+        <div>
+            <PivotTable
+                setProps={setProps}
+                {...state}
+            />
+        </div>
+    )
+};
 
-    render() {
-        return (
-            <div>
-                <PivotTable
-                    setProps={this.setProps}
-                    {...this.state}
-                />
-            </div>
-        )
-    }
-}
 
 export default App;
